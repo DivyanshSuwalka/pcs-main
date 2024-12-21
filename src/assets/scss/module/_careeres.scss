@@ -1,0 +1,72 @@
+/*-----------------------
+    careers
+------------------------*/
+.jobs-container {
+    background-color: $color-white;
+    border: 1px solid #e7ebef;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.job-item {
+    padding: 40px 38px 30px;
+    border-bottom: 1px solid #e7ebef;
+    @include prefix(transition, all 0.4s ease, webkit moz ms o);
+
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    .job__meta {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .job__type {
+        font-size: 13px;
+        text-transform: capitalize;
+        background-color: $color-primary;
+        color: $color-white;
+        padding: 3px 8px;
+        border-radius: 2px;
+        margin-right: 20px;
+    }
+
+    .job__location {
+        font-size: 13px;
+    }
+
+    .job__title {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .job__desc {
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+}
+
+/* Mobile Phones & tablets and Small Screens */
+@media (max-width:992px) {
+    .job-item {
+        padding: 15px;
+
+        .job__meta {
+            margin-bottom: 10px;
+        }
+
+        .job__title {
+            margin-bottom: 10px;
+        }
+
+        .btn-wrap {
+            margin-top: 10px;
+            -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+        }
+    }
+}

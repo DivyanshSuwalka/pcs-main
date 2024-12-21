@@ -1,0 +1,100 @@
+/*--------------------------
+      Video
+--------------------------*/
+.video__btn {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    padding-left: 70px;
+    height: 60px;
+
+    .video__player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 50%;
+        color: $color-white;
+        background-color: $color-primary;
+        box-shadow: 0 0 0 7px rgba(255, 255, 255, .25);
+        @include prefix(transition, all .3s linear, webkit moz ms o);
+    }
+
+    &:hover {
+        .video__player {
+            box-shadow: 0 0 0 10px rgba(255, 255, 255, .25);
+        }
+    }
+
+    .video__btn-title {
+        font-size: 15px;
+        font-weight: 700;
+        padding-top: 20px;
+        line-height: 1;
+        display: inline-block;
+        white-space: nowrap;
+        margin-left: 12px;
+    }
+
+    &-lg {
+        padding-left: 80px;
+        height: 80px;
+
+        .video__player {
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+        }
+    }
+}
+
+.video__btn-white {
+    .video__player {
+        background-color: $color-white !important;
+        color: $color-heading;
+    }
+
+    .video__player-animation {
+        border-color: $color-white !important;
+    }
+}
+
+.video__btn-theme {
+    .video__player-animation {
+        border-color: $color-primary;
+    }
+}
+
+.video-banner {
+    position: relative;
+
+    .video__btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include prefix(transform, translate(-50%, -50%), webkit moz ms o);
+    }
+
+    .video__btn-title {
+        position: absolute;
+        bottom: -30px;
+        left: -7px;
+        line-height: 1.5;
+    }
+}
+
+/* Mobile Phones */
+@include xs-screens {
+    .video__btn {
+        padding-left: 50px;
+        height: 50px;
+
+        .video__player {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+    }
+}

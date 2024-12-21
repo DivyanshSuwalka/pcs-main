@@ -1,0 +1,157 @@
+/*----------------------
+    Carousel
+-----------------------*/
+.slick-list {
+    margin: 0 -10px;
+}
+
+.slick-slide {
+    margin: 0 10px;
+}
+
+.m-slides-0 {
+    .slick-list {
+        margin: 0;
+    }
+
+    .slick-slide {
+        margin: 0;
+    }
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    @include prefix(transform, translateY(-50%), webkit moz ms o);
+    color: $color-body;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 0;
+    z-index: 3;
+    @include prefix(transition, all 0.3s linear, webkit moz ms o);
+
+    &:hover {
+        color: $color-primary
+    }
+
+    &.slick-next,
+    &.slick-prev {
+        &:before {
+            font-family: 'icomoon';
+            font-size: 40px;
+        }
+    }
+
+    &.slick-next {
+        right: 0;
+
+        &:before {
+            content: "\e904";
+        }
+    }
+
+    &.slick-prev {
+        left: 0;
+
+        &:before {
+            content: "\e902";
+        }
+    }
+}
+
+.carousel-arrows-light .slick-arrow {
+    color: rgba($color-white, 0.8);
+    border-color: rgba($color-white, 0.2);
+
+    &:hover {
+        color: $color-white
+    }
+}
+
+.slick-dots {
+    list-style: none;
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 0;
+
+    li {
+        display: inline-flex;
+        position: relative;
+        width: 12px;
+        height: 12px;
+        margin: 0 20px;
+        @include prefix(transition, all 0.3s linear, webkit moz ms o);
+
+        button {
+            display: block;
+            font-size: 0;
+            width: 10px;
+            height: 10px;
+            padding: 0;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2.5px solid $color-secondary;
+            @include prefix(transition, all 0.2s linear, webkit moz ms o);
+        }
+
+        &:not(:first-child):before,
+        &:not(:last-child):after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 12px;
+            height: 2px;
+            background-color: $color-secondary;
+            @include prefix(transform, translateY(-50%), webkit moz ms o);
+        }
+
+        &:not(:first-child):before {
+            left: -20px;
+        }
+
+        &:not(:last-child):after {
+            left: 20px;
+        }
+
+        &.slick-active {
+
+            &:before,
+            &:after {
+                background-color: $color-primary;
+            }
+
+            button {
+                border-color: $color-primary;
+                @include prefix(transform, scale(1.2), webkit moz ms o);
+            }
+        }
+    }
+}
+
+.carousel-dots-light .slick-dots li {
+
+    button {
+        border-color: $color-white;
+    }
+
+    &:not(:first-child):before,
+    &:not(:last-child):after {
+        background-color: $color-white;
+    }
+
+    &.slick-active {
+
+        &:before,
+        &:after {
+            background-color: $color-primary;
+        }
+
+        button {
+            border-color: $color-primary;
+        }
+    }
+}

@@ -1,0 +1,145 @@
+/*----------------------------
+    Contact
+----------------------------*/
+.contact-block {
+    margin-bottom: 30px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &-light {
+
+        .contact-block__title,
+        .contact-block__list li,
+        .contact-block__list li a {
+            color: $color-white
+        }
+    }
+
+    .contact-block__title {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .contact-block__list {
+        margin-bottom: 0;
+
+        li {
+            font-size: 14px;
+        }
+    }
+}
+
+.contact-info-box {
+    margin-bottom: 30px;
+
+    .contact__info-box-title {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .contact__info-list {
+        margin-bottom: 0;
+
+        li {
+            font-size: 14px;
+            margin-bottom: 7px;
+
+            a {
+                color: $color-body;
+            }
+        }
+    }
+}
+
+.contact-panel {
+    position: relative;
+    z-index: 2;
+    padding: 60px;
+    border-radius: 5px;
+    background-color: $color-white;
+    box-shadow: 0px 5px 83px 0px rgba(9, 29, 62, 0.1);
+}
+
+.contact-panel__title {
+    font-size: 24px;
+}
+
+.contact-panel__desc {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+[class*="contact-layout"] {
+    textarea.form-control {
+        min-height: 120px;
+    }
+
+    .contact-panel__info {
+        padding: 55px 60px 60px;
+        border-radius: 3px;
+        overflow: hidden;
+        flex: 0 0 38%;
+        max-width: 38%;
+
+        .contact-block__title {
+            color: $color-white;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .contact-block__list {
+            margin-bottom: 30px;
+
+            li {
+                color: $color-white;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .contact-panel__form {
+        flex: 0 0 62%;
+        max-width: 62%;
+    }
+}
+
+@media (min-width:992px) {
+    [class*="contact-layout"] .contact-panel__form {
+        padding-left: 70px;
+    }
+}
+
+/* Mobile Phones & tablets and Small Screens */
+@media (max-width:992px) {
+    .contact-panel {
+        padding: 20px;
+
+        .contact-panel__desc {
+            font-size: 13px;
+            line-height: 23px;
+        }
+    }
+
+    [class*="contact-layout"] {
+        .contact-panel__info {
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contact-panel__info,
+        .contact-panel__form {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .contact-info-box .contact__info-box-title {
+        margin-bottom: 10px;
+    }
+}

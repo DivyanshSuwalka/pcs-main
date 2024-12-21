@@ -1,0 +1,215 @@
+/*-----------------------
+    Services 
+--------------------------*/
+.service-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    padding: 50px 40px 50px 50px;
+    background-color: $color-white;
+    box-shadow: 0px 5px 83px 0px rgba(9, 29, 62, 0.05);
+    @include prefix(transition, all .3s ease, webkit moz ms o);
+
+    .service__icon {
+        color: $color-primary;
+        font-size: 70px;
+        line-height: 1;
+        margin-bottom: 30px;
+        @include prefix(transition, all .3s linear, webkit moz ms o);
+    }
+
+    .service__title {
+        font-size: 24px;
+        margin-bottom: 31px;
+        @include prefix(transition, all .3s linear, webkit moz ms o);
+    }
+
+    .service__desc {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 32px;
+        @include prefix(transition, all .3s linear, webkit moz ms o);
+    }
+
+    .service__content {
+        position: relative;
+        z-index: 2;
+        padding-top: 38px;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50px;
+            height: 2px;
+            @include prefix(transition, all 0.3s linear, webkit moz ms o);
+        }
+
+        &:before {
+            width: calc(100% + 50px);
+            background-color: #e6e8eb;
+        }
+
+        &:after {
+            width: 0;
+            background-color: $color-primary;
+        }
+    }
+
+    .btn {
+        height: 39px;
+        line-height: 39px;
+        min-width: 120px;
+        color: $color-primary;
+        background-color: transparent;
+
+        &:before {
+            display: none;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 56px;
+            height: 100%;
+            z-index: -1;
+            background-color: #e5f4ff;
+            @include prefix(transition, all .3s linear, webkit moz ms o);
+        }
+
+        .icon-arrow-right,
+        .icon-arrow-left {
+            width: auto;
+            color: $color-primary;
+            background-color: transparent !important;
+        }
+
+        &:hover {
+            color: $color-white;
+
+            &:after {
+                width: 100%;
+                background-color: $color-primary;
+            }
+
+            .icon-arrow-right,
+            .icon-arrow-left {
+                color: $color-white;
+            }
+        }
+    }
+
+    &:hover {
+        z-index: 5;
+        box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.12);
+
+        .service__content:after {
+            width: calc(100% + 50px);
+        }
+    }
+}
+
+.services-layout2 {
+    .service-item {
+        padding: 0;
+        box-shadow: none;
+        margin-bottom: 60px;
+
+        .service__img {
+            overflow: hidden;
+            border-radius: 5px;
+
+            img {
+                @include prefix(transition, all 0.9s ease, webkit moz ms o);
+            }
+        }
+
+        .service__content {
+            padding: 30px 30px 0 50px;
+
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
+
+        &:hover .service__img img {
+            @include prefix(transform, scale(1.1), webkit moz ms o);
+        }
+    }
+}
+
+.services-carousel {
+    &.services-layout1 .service-item {
+        box-shadow: 0px 5px 83px 0px rgba(9, 29, 62, 0.05);
+
+        &:hover {
+            box-shadow: 0px 5px 83px 0px rgba(9, 29, 62, 0.15);
+        }
+    }
+
+    .slick-list {
+        margin: -15px;
+        overflow: visible;
+    }
+
+    .slick-slide {
+        margin: 15px;
+        @include prefix(transition, all 0.3s ease, webkit moz ms o);
+
+        &.slick-active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &:not(.slick-active) {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}
+
+/* Mobile Phones & tablets and Small Screens */
+@media (max-width:992px) {
+    .service-item {
+        .service__icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .service__title {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .service__desc {
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .services-layout1 {
+        .service-item {
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .services-layout2 {
+        .service-item {
+            margin-bottom: 30px;
+
+            .service__content {
+                padding: 15px 0 0 0;
+            }
+        }
+    }
+
+    .services-layout3 .service-item {
+        padding: 20px;
+    }
+}

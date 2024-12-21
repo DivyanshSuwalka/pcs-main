@@ -1,0 +1,97 @@
+/*-------------------------
+   Timeline
+-------------------------*/
+.timeline-item {
+    .timeline__year {
+        position: relative;
+        color: $color-white;
+        font-size: 18px;
+        font-weight: 600;
+        flex: 0 0 110px;
+        max-width: 110px;
+        margin-bottom: 0;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            right: -4px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: $color-primary;
+            @include prefix(transition, 0.3s linear, webkit moz ms o);
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 22px;
+            bottom: 5px;
+            right: -1px;
+            width: 2px;
+            // height: 100%;
+            background-color: $color-primary;
+        }
+
+    }
+
+    .timeline__desc {
+        font-size: 15px;
+        padding-left: 60px;
+        margin-bottom: 0;
+        padding-bottom: 48px;
+    }
+
+    &:hover {
+        .timeline__year:before {
+            @include prefix(transform, scale(1.3), webkit moz ms o);
+        }
+    }
+
+    &:last-of-type {
+        .timeline__desc {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.history-timeline {
+    .cta-banner {
+        padding: 40px;
+        max-width: 100%;
+        background-color: #07305d;
+
+        .cta__title {
+            color: $color-white;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            height: 50px;
+            line-height: 50px;
+
+            &:not(.btn__xl) {
+                min-width: 130px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .history-timeline {
+        .cta-banner {
+            .cta__title {
+                font-size: 14px;
+                line-height: 1.3;
+                margin-bottom: 0;
+            }
+
+            .btn {
+                margin-top: 10px;
+            }
+        }
+    }
+}

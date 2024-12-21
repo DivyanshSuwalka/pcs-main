@@ -1,0 +1,95 @@
+/*----------------------
+    Page 404
+-----------------------*/
+.page-404,
+.coming-soon {
+    .error-code {
+        color: $color-white;
+        font-size: 165px;
+        font-weight: 400;
+        font-style: italic;
+        line-height: 1;
+        margin-bottom: 22px;
+    }
+
+    .error-title {
+        color: $color-white;
+        font-size: 37px;
+        font-weight: 700;
+    }
+
+    .error-desc {
+        color: $color-white;
+        font-size: 16px;
+        max-width: 470px;
+        margin: 0 auto 32px;
+    }
+}
+
+.coming-soon {
+    .error-title {
+        font-size: 65px;
+    }
+
+    .subscribe-form {
+        position: relative;
+        max-width: 570px;
+        margin: auto;
+
+        .form-control {
+            height: 60px;
+            color: $color-body;
+            background-color: $color-white;
+
+
+            &::-webkit-input-placeholder {
+                color: $color-body;
+            }
+
+            &:-moz-placeholder {
+                color: $color-body;
+            }
+
+            &::-moz-placeholder {
+                color: $color-body;
+            }
+
+            &:-ms-input-placeholder {
+                color: $color-body;
+            }
+        }
+
+        .btn__primary {
+            min-width: 137px;
+        }
+    }
+
+    .social-icons-primary li a:hover {
+        color: $color-white;
+    }
+}
+
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+
+    .page-404,
+    .coming-soon {
+        margin-top: 0;
+
+        .error-code {
+            font-size: 90px;
+            margin-bottom: 20px;
+        }
+
+        .error-title {
+            font-size: 30px;
+        }
+
+        .error-desc {
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+    }
+}

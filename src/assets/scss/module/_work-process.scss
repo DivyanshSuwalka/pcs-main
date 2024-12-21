@@ -1,0 +1,190 @@
+/*-------------------------
+    Work Process
+-------------------------*/
+.process-item {
+    position: relative;
+
+    .process-item__icon {
+        position: relative;
+        color: $color-white;
+        font-size: 65px;
+        flex: 0 0 22%;
+        max-width: 22%;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: -6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $color-primary;
+            @include prefix(transition, all .3s linear, webkit moz ms o);
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -16px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid rgba(230, 233, 235, .1);
+            @include prefix(transition, all .3s linear, webkit moz ms o);
+        }
+    }
+
+    .process-item__content {
+        position: relative;
+        padding-left: 80px;
+        margin-bottom: 40px;
+
+        &:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            line-height: 26px;
+            text-align: center;
+            font-size: 11px;
+            color: #fff;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid $color-body;
+            transition: all 300ms ease 0s;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            bottom: 0;
+            left: 15px;
+            width: 2px;
+            background-color: $color-body;
+            @include prefix(transition, all .3s linear, webkit moz ms o);
+        }
+    }
+
+    .process-item__title {
+        color: $color-white;
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .process-item__desc {
+        color: #8097a1;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    &:last-of-type .process-item__content {
+        margin-bottom: 0;
+    }
+
+    &.active {
+        .process-item__content {
+            &:before {
+                border-color: #054c8b;
+                background-color: #054c8b;
+            }
+
+            &:after {
+                background-color: #054c8b;
+            }
+        }
+    }
+}
+
+.work-process {
+    .cta-banner {
+        padding: 0;
+        max-width: 100%;
+        background-color: transparent;
+
+        .cta__title {
+            color: $color-white;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 0;
+            flex: 0 0 calc(100% - 190px);
+            max-width: calc(100% - 190px);
+
+            a:hover {
+                color: $color-white;
+            }
+        }
+
+        .btn {
+            font-size: 14px;
+            min-width: 170px;
+            flex: 0 0 170px;
+        }
+    }
+
+    .video__banner {
+        position: relative;
+
+        .video__btn {
+            position: absolute;
+            right: 50px;
+            bottom: 50px;
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    .work-process .banners-wrapper {
+        margin-left: -70px;
+        margin-right: 50px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .process-item {
+        .process-item__content {
+            padding-left: 40px;
+            margin-bottom: 20px;
+
+            &:before {
+                width: 25px;
+                height: 25px;
+                line-height: 21px;
+                font-size: 9px;
+            }
+
+            &:after {
+                top: 35px;
+                left: 12px;
+            }
+        }
+    }
+
+    .work-process {
+        .cta-banner {
+            margin-top: 0 !important;
+            margin-bottom: 50px !important;
+            text-align: center;
+            flex-direction: column;
+
+            .cta__title {
+                font-size: 14px;
+                line-height: 1.5;
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .btn {
+                max-height: 50px;
+            }
+        }
+    }
+}

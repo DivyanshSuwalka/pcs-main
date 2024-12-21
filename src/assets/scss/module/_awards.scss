@@ -1,0 +1,93 @@
+/*-------------------------
+   Awards
+-------------------------*/
+.awards {
+    .fancybox-item {
+        border-radius: 5px;
+        text-align: center;
+        padding: 48px 30px 37px;
+        background-color: #f1f5fe;
+
+        .fancybox__icon__img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 65px;
+            margin-bottom: 30px;
+
+            img {
+                max-height: 100%;
+                @include prefix(transition, all 0.4s linear, webkit moz ms o);
+            }
+        }
+
+        .fancybox__title {
+            font-size: 18px;
+        }
+
+        .fancybox__desc {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            .fancybox__icon__img img {
+                @include prefix(transform, rotateY(360deg), webkit moz ms o);
+            }
+
+            .fancybox__title {
+                color: $color-primary;
+            }
+        }
+    }
+
+    .pinned-ribbon {
+        position: absolute;
+        top: 0;
+        right: 40px;
+        width: 15px;
+        height: 30px;
+        background-color: $color-primary;
+
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border: 7.5px solid transparent;
+            border-bottom-color: $color-gray;
+        }
+    }
+
+    .btn__primary.btn__link {
+        .icon-outlined {
+            color: $color-secondary;
+        }
+
+        &:hover {
+            .icon-outlined {
+                color: $color-white;
+                border-color: $color-secondary;
+                background-color: $color-secondary;
+            }
+        }
+    }
+}
+
+/* Mobile Phones & tablets and Small Screens */
+@media screen and (max-width: 992px) {
+    .awards {
+        .fancybox-item {
+            padding: 28px 20px 27px;
+            margin-bottom: 20px;
+
+            .fancybox__icon__img {
+                margin-bottom: 15px;
+            }
+        }
+
+        .pinned-ribbon {
+            right: 20px;
+        }
+    }
+}

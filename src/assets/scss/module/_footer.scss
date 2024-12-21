@@ -1,0 +1,213 @@
+/*-------------------------
+    Footer
+--------------------------*/
+.footer {
+    .footer-top__title {
+        color: $color-white;
+        font-size: 18px;
+    }
+
+    .footer-secondary {
+        padding-bottom: 44px;
+
+        span {
+            color: rgba(255, 255, 255, .6);
+        }
+    }
+
+    .footer-primary {
+        padding-top: 85px;
+        padding-bottom: 65px;
+        border-top: 2px solid #053362;
+    }
+
+    .footer-widget {
+        margin-bottom: 30px;
+    }
+
+    .footer-widget__title {
+        color: $color-white;
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+    }
+
+    .contact-list li {
+        line-height: 26px;
+        margin-bottom: 0;
+    }
+
+    .btn__download {
+        min-width: 145px;
+        letter-spacing: 0;
+        height: 50px;
+        line-height: 50px;
+
+        &:before {
+            background-color: $color-primary !important;
+        }
+    }
+
+    .footer-form {
+        .form-control {
+            border-color: transparent;
+            background-color: #063464;
+            color: $color-body;
+            height: 60px;
+
+            &:focus {
+                border-color: $color-body;
+            }
+
+            &::-webkit-input-placeholder {
+                color: $color-body;
+            }
+
+            &:-moz-placeholder {
+                color: $color-body;
+            }
+
+            &::-moz-placeholder {
+                color: $color-body;
+            }
+
+            &:-ms-input-placeholder {
+                color: $color-body;
+            }
+        }
+
+        .btn {
+            min-width: 140px;
+        }
+    }
+
+    .footer-widget-nav li a {
+        display: block;
+        position: relative;
+        color: $color-body;
+        font-size: 14px;
+        margin-bottom: 11px;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    .social-icons li a {
+        color: $color-primary;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+}
+
+.phone-number {
+    font-family: $font-heading;
+    font-weight: 600;
+    font-size: 22px;
+    color: $color-primary !important;
+
+    &:hover {
+        color: $color-body !important;
+    }
+}
+
+/* Scroll Top Button */
+#scrollTopBtn {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    width: 45px;
+    height: 45px;
+    opacity: 0;
+    z-index: 1000;
+    font-size: 18px;
+    border-radius: 50%;
+    color: $color-white;
+    background-color: $color-primary;
+    overflow: hidden;
+    @include prefix(transition, all .3s ease-in-out, webkit moz ms o);
+
+    &:hover {
+        background-color: $color-dark;
+    }
+
+    &.actived {
+        right: 30px;
+        opacity: 1;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .footer .footer-widget-about p {
+        max-width: 270px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@media (min-width: 320px) and (max-width: 1200px) {
+    .footer {
+        .footer-primary {
+            padding-top: 30px;
+            padding-bottom: 0;
+        }
+
+        .footer-secondary {
+            padding-bottom: 20px;
+        }
+
+        .footer .footer-widget {
+            margin-bottom: 20px;
+        }
+
+        .footer-widget__title {
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .footer-widget-nav li a {
+            font-size: 13px;
+        }
+    }
+}
+
+/* Mobile Phones */
+@include xs-screens {
+    .footer {
+        .footer-form {
+            flex-wrap: wrap;
+
+            .btn,
+            .form-control {
+                margin-right: 10px !important;
+                margin-bottom: 10px;
+                font-size: 13px;
+                height: 50px;
+                line-height: 50px;
+            }
+        }
+
+        .btn__download {
+            min-width: 120px;
+            height: 35px;
+            line-height: 35px;
+        }
+    }
+
+    #scrollTopBtn {
+        bottom: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+
+        &.actived {
+            right: 20px;
+        }
+    }
+}

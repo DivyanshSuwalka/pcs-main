@@ -1,0 +1,58 @@
+/*---------------------------
+    Counters
+--------------------------*/
+.counter-item {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background-color: $color-primary;
+    }
+
+    .counter {
+        color: $color-secondary;
+        font-family: $font-heading;
+        font-size: 65px;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 16px;
+    }
+
+    .counter__desc {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 0;
+        padding-right: 40px;
+    }
+}
+
+.counters-light {
+
+    .counter-item .counter,
+    .counter-item .counter__desc {
+        color: $color-white;
+    }
+}
+
+/* Mobile Phones & tablets and Small Screens */
+@media (max-width:992px) {
+    .counter-item {
+        padding-left: 15px;
+
+        .counter {
+            font-size: 25px;
+        }
+
+        .counter__desc {
+            font-size: 13px;
+            padding-right: 0;
+        }
+    }
+}
