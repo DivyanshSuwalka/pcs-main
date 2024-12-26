@@ -75,7 +75,55 @@
       <b><a href="https://www.google.com/maps/place/Sharkspace+Coworking+%7C+Office+on+Rent/@28.6207146,77.3799469,17z/data=!3m1!4b1!4m6!3m5!1s0x390cefb95942fa95:0xeb0ad81d2e7debd8!8m2!3d28.6207146!4d77.3799469!16s%2Fg%2F11vy5f2vkm?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">Live Location</a></b>
     </div>
 
+      <!-- contact us form -->
 
+     
 
 </div>
+<form class="contact-panel__form" method="post" action="assets/php/contact.php" id="contactForm">
+  <div class="row">
+      <div class="col-sm-12">
+          <h4 class="contact-panel__title">Connect To Us</h4>
+          <p class="contact-panel__desc mb-20">Our deep pool of certified engineers and IT staff
+              are ready to
+              help you to keep your IT business safe & ensure high availability.</p>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="form-group">
+              <input type="text" class="form-control" placeholder="Name" id="contact-name"
+                  name="contact-name" required>
+          </div>
+      </div><!-- /.col-lg-6 -->
+      <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email" id="contact-email"
+                  name="contact-email" required>
+          </div>
+      </div><!-- /.col-lg-6 -->
+      <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="form-group">
+              <select class="form-control">
+                  <option value="1">Inquiry</option>
+                  <!-- <option value="2">case study</option> -->
+              </select>
+          </div>
+      </div><!-- /.col-lg-6 -->
+      <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="form-group">
+              <input type="text" class="form-control" placeholder="Phone" id="contact-Phone"
+                  name="contact-phone" required>
+          </div>
+      </div><!-- /.col-lg-6 -->
+      <div class="col-12">
+          <div class="form-group">
+              <textarea class="form-control" placeholder="Describe your inquirey!"
+                  id="contact-message" name="contact-message"></textarea>
+          </div>
+          <button type="submit" class="btn btn__secondary btn__icon btn__xhight mt-10">
+              <span>Submit Request</span> <i class="icon-arrow-right"></i>
+          </button>
+          <div class="contact-result"></div>
+      </div><!-- /.col-lg-12 -->
+  </div><!-- /.row -->
+</form>
 <!-- <router-outlet></router-outlet> -->
