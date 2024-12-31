@@ -1,6 +1,10 @@
 .blinking{
     animation:blinkingText 5.2s infinite;
 }
+
+.contact__list li a{
+    text-decoration: none;
+}
 @keyframes blinkingText{
     0%{     color: rgb(21, 96, 215);    }
     49%{    color: rgb(21, 96, 215); }
