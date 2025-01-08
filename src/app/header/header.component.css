@@ -2,6 +2,18 @@
     animation:blinkingText 5.2s infinite;
 }
 
+.navbar-actions a{
+    text-decoration: none;
+    margin-right: 20px;
+    color: whitesmoke;
+    opacity: 0.8;
+    
+}
+
+.navbar-actions a:hover{
+    color: cyan;
+}
+
 .contact__list li a{
     text-decoration: none;
 }
