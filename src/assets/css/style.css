@@ -2614,7 +2614,7 @@ input[type=radio] {
 
 /* Navbar */
 .navbar {
-  padding: 0;
+  padding: 0px;
   height: 100px;
   max-height: 100px;
   background-color: #ffffff;
@@ -7917,7 +7917,7 @@ input[type=radio] {
         }
 
         .navbar .navbar-brand {
-            padding: 0;
+            padding: 0px;
             margin: 0;
             line-height: 111px;
         }
@@ -7981,6 +7981,9 @@ section {
     font-size: 15px;
     font-weight: 700;
     line-height: 1;
+
+
+
     color: #2dbbce;
 }
 .secondary-nav {
