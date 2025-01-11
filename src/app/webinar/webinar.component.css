@@ -8,18 +8,6 @@
     flex-wrap: wrap;
 }
 
-.media-left p a{
-    text-decoration: none;
-    color: #0D7586;
-    position: absolute;
-    top: 2px;
-    right: 18px;
-}
-
-.media-left p a:hover{
-    color: #8AB4F8;
-}
-
 .media-container iframe{
 
     aspect-ratio: 16 / 9;
@@ -53,7 +41,3 @@
 
     
 }
-
-
-
-

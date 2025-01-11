@@ -48,6 +48,7 @@ import { DeveloperTeamComponent } from './developer-team/developer-team.componen
 import { HireDevelopersComponent } from './hire-developers/hire-developers.component';
 import { TcsNinjaTestPreparationComponent } from './tcs-ninja-test-preparation/tcs-ninja-test-preparation.component';
 import { YouthEmployeebilityProgramComponent } from './youth-employeebility-program/youth-employeebility-program.component';
+import { WebinarComponent } from './webinar/webinar.component';
 
 @NgModule({
   declarations: [
@@ -97,7 +98,8 @@ import { YouthEmployeebilityProgramComponent } from './youth-employeebility-prog
     DeveloperTeamComponent,
     HireDevelopersComponent,
     TcsNinjaTestPreparationComponent,
-    YouthEmployeebilityProgramComponent
+    YouthEmployeebilityProgramComponent,
+    WebinarComponent
   ],
   imports: [
     BrowserModule,
