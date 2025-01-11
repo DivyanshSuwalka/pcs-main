@@ -4272,7 +4272,7 @@ input[type=radio] {
 }
 
 /*------------------------
-    Slider     
+    Slider 
 --------------------------*/
 .header-transparent + .slider {
   margin-top: -100px;
