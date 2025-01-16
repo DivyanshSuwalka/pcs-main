@@ -1,0 +1,43 @@
+.client img{
+    width:100px;
+}
+
+.media-container{
+    width:100%;
+    gap:100px;
+    flex-wrap: wrap;
+}
+
+.media-container iframe{
+
+    aspect-ratio: 16 / 9;
+    border-radius: 7%;
+    width: 400px!important;
+    padding: 0px !important;
+
+
+}
+.media-container video {
+    /* width: 100%; */
+    aspect-ratio: 16 / 9;
+    border-radius: 7%;
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {
+
+    .media-container{
+        gap:50px;
+    }
+  .media-container video {
+    width: 100%!important;
+   
+  
+}
+
+.media-container iframe{
+    width: 100% !important;
+}
+
+    
+}
