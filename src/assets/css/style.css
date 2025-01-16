@@ -2614,7 +2614,7 @@ input[type=radio] {
 
 /* Navbar */
 .navbar {
-  padding: 0px;
+  /* padding: 0px; */
   height: 100px;
   max-height: 100px;
   background-color: #ffffff;
@@ -2629,7 +2629,7 @@ input[type=radio] {
 }
 
 .navbar .navbar-brand {
-  padding: 0;
+  /* padding: 0; */
   margin: 0;
   line-height: 135px;
 }
@@ -2639,7 +2639,7 @@ input[type=radio] {
 }
 
 .navbar .navbar-toggler {
-  padding: 0;
+  /* padding: 0; */
   border: none;
   border-radius: 0;
   width: 23px;
@@ -2657,7 +2657,7 @@ input[type=radio] {
   width: 23px;
   height: 1px;
   display: inline-block;
-  background-color: #091d3e;
+  background-color: #e2e4e7;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
@@ -2676,7 +2676,7 @@ input[type=radio] {
   left: 0;
   width: 18px;
   height: 1px;
-  background-color: #091d3e;
+  background-color: #f4f6f8;
 }
 
 .navbar .navbar-toggler.actived .menu-lines > span {
@@ -2694,6 +2694,7 @@ input[type=radio] {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 
 .navbar .nav__item {
   position: relative;

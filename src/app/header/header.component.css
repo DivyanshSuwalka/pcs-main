@@ -14,6 +14,10 @@
     color: cyan;
 }
 
+.header-top{
+    padding-left: 24px;
+}
+
 .contact__list li a{
     text-decoration: none;
 }
@@ -24,4 +28,59 @@
     70%{    color:transparent; }
     99%{    color:red;  }
     100%{   color: red;    }
+}
+
+@media(max-width:768px){
+    .blinking{
+        display: none!important;
+    }
+    .navbar-actions{
+        display: none!important;
+    }
+    .icon{
+        display: none!important;
+    }
+    .header-top{
+        padding-left: 0px!important;
+        margin: auto!important;
+    }
+    .contact__list{
+        justify-content: center!important;
+        align-items: center;
+        margin: auto!important;
+        margin-bottom: 0px!important;
+    
+    }
+    .navbar{
+        /* margin-bottom: 0px!important;
+        margin-top: 20px!important; */
+        height: 107px!important;
+    }
+    .navbar .navbar-brand{
+        height: 120px!important;
+    }
+    .navbar .navbar-brand img{
+        padding-bottom: 20px!important;
+        height: 140px;
+    }
+    .navbar-toggler{
+        /* background-color: white!important; */
+        margin-top: 16px!important;
+       
+    }
+    .navbar-toggler span{
+        background-color: #e2e4e7!important;
+    }
+    
+    .navbar .navbar-toggler .menu-lines:before, .navbar .navbar-toggler .menu-lines:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 23px;
+        height: 1px;
+        display: inline-block;
+        background-color: #e2e4e7;
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+      }
 }
