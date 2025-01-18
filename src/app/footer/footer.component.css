@@ -1,3 +1,10 @@
 .list-unstyled li a{
     text-decoration: none;
 }
+
+@media(max-width:768px){
+    
+    .footer-main{
+        padding-left: 25px;
+    }
+}
