@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -8,9 +8,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(router:Router,private route: ActivatedRoute) { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    });
   }
 
 }

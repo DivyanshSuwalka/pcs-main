@@ -13,6 +13,9 @@
 .navbar-actions a:hover{
     color: cyan;
 }
+.active{
+    color: cyan!important;
+}
 
 .header-top{
     padding-left: 24px;

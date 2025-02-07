@@ -1,3 +1,9 @@
+.list-unstyled li {
+    text-decoration: none;
+    color: #BAE8FD;
+    font-size: 14px;
+    margin-bottom: 11px;
+}
 .list-unstyled li a{
     text-decoration: none;
 }
